@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VocaFlow — AI Voice Vocabulary Coach</title>
+<style>
+:root{--bg:#080b14;--panel:#111726;--panel2:#171e30;--text:#f6f7fb;--muted:#99a3b8;--line:#263047;--accent:#7c6cff;--accent2:#25d0b1;--danger:#ff647c;--shadow:0 24px 70px #0008}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,#26205a 0,#0b0e19 32%,#070910 75%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);min-height:100vh}
+button{font:inherit}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.side{border-right:1px solid #ffffff12;background:#0b0f1bdd;padding:25px 17px;backdrop-filter:blur(18px);position:sticky;top:0;height:100vh}.brand{font-weight:900;font-size:22px;display:flex;gap:10px;align-items:center;margin:3px 10px 35px}.logo{width:35px;height:35px;border-radius:11px;background:linear-gradient(135deg,var(--accent),#b28cff);display:grid;place-items:center;box-shadow:0 10px 30px #7c6cff55}.nav button{width:100%;text-align:left;background:transparent;color:var(--muted);border:0;padding:12px 13px;border-radius:12px;margin:3px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#ffffff0c;color:white}.profile{position:absolute;bottom:20px;left:17px;right:17px;border:1px solid var(--line);border-radius:15px;padding:13px;background:#ffffff05}.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#2bd6bd,#6d70ff);display:inline-grid;place-items:center;font-weight:800;margin-right:9px}.main{max-width:1180px;width:100%;margin:auto;padding:34px 42px 50px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.eyebrow{color:#8d98af;font-size:13px}.top h1{font-size:30px;margin:5px 0}.streak{border:1px solid #34405c;background:#ffffff08;border-radius:14px;padding:10px 15px}.grid{display:grid;grid-template-columns:1.45fr .85fr;gap:20px}.card{background:linear-gradient(145deg,#121a2b,#0e1421);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.lesson{padding:30px;min-height:570px}.lesson-head{display:flex;justify-content:space-between;align-items:start}.pill{font-size:12px;color:#b8b3ff;background:#7c6cff18;border:1px solid #7c6cff40;border-radius:999px;padding:7px 10px}.word{font-size:66px;letter-spacing:-3px;font-weight:900;margin:42px 0 4px}.phonetic{color:#aeb8ca;font-size:17px}.meaning{font-size:21px;margin:20px 0 8px}.example{color:#aab4c8;line-height:1.6;font-size:15px;max-width:690px}.audio{display:flex;gap:10px;margin:28px 0}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:750;cursor:pointer;transition:.2s}.primary{background:linear-gradient(135deg,var(--accent),#9b6dff);color:white;box-shadow:0 10px 25px #7c6cff30}.primary:hover{transform:translateY(-1px)}.ghost{background:#ffffff08;color:white;border:1px solid var(--line)}.practice{border-top:1px solid var(--line);padding-top:22px}.practice-title{display:flex;justify-content:space-between;align-items:center}.mic{width:74px;height:74px;border-radius:50%;border:1px solid #ffffff1a;background:radial-gradient(circle,#29234d,#171a2a);color:white;font-size:27px;cursor:pointer;box-shadow:0 0 0 9px #ffffff03}.mic.recording{background:radial-gradient(circle,#632b42,#281928);box-shadow:0 0 0 9px #ff647c18,0 0 45px #ff647c25}.feedback{margin-top:16px;padding:14px;border-radius:14px;background:#ffffff05;color:var(--muted);min-height:49px}.sidecol{display:flex;flex-direction:column;gap:20px}.mini{padding:22px}.mini h3{margin:0 0 16px}.stat{display:flex;justify-content:space-between;margin:12px 0;color:#aeb8ca}.bar{height:8px;background:#20293c;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;width:72%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:20px}.words{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid var(--line);padding:8px 10px;border-radius:10px;color:#c4cbda;background:#ffffff05;font-size:13px}.challenge{background:linear-gradient(135deg,#171d37,#12251f);border-color:#344b50}.challenge p{color:#aeb8c9;line-height:1.5}.score{font-size:35px;font-weight:900;color:#72e5cb}.toast{position:fixed;right:25px;bottom:25px;background:#151d2d;border:1px solid var(--line);padding:13px 16px;border-radius:13px;display:none;box-shadow:var(--shadow)}@media(max-width:900px){.app{grid-template-columns:1fr}.side{display:none}.main{padding:24px 16px}.grid{grid-template-columns:1fr}.word{font-size:52px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand"><div class="logo">V</div> VocaFlow</div>
+<div class="nav">
+<button class="active">◉ &nbsp; Learn</button><button>◌ &nbsp; Practice</button><button>▣ &nbsp; Progress</button><button>☆ &nbsp; Saved Words</button>
+</div>
+<div class="profile"><span class="avatar">G</span><b>Daily learner</b><div style="color:#7f8ba2;font-size:12px;margin-left:46px;margin-top:-4px">Keep your streak alive</div></div>
+</aside>
+<main class="main">
+<div class="top"><div><div class="eyebrow">VOCABULARY • ENGLISH</div><h1>Good evening 👋</h1><div class="eyebrow">A focused 10-minute voice lesson</div></div><div class="streak">🔥 <b id="streak">7</b> day streak</div></div>
+<div class="grid">
+<section class="card lesson">
+<div class="lesson-head"><div><span class="pill">INTERMEDIATE · WORD 3 OF 10</span></div><span class="eyebrow">+10 XP</span></div>
+<div class="word" id="word">Resilient</div><div class="phonetic" id="phonetic">/rɪˈzɪliənt/ · adjective</div>
+<div class="meaning" id="meaning">Able to recover quickly from difficulty or change.</div>
+<div class="example" id="example">“A resilient learner keeps practicing even after making mistakes.”</div>
+<div class="audio"><button class="btn primary" onclick="speakWord()">🔊 Listen</button><button class="btn ghost" onclick="slowSpeak()">◷ Slow</button><button class="btn ghost" onclick="saveWord()">☆ Save</button></div>
+<div class="practice">
+<div class="practice-title"><div><b>Speak it yourself</b><div class="eyebrow" style="margin-top:4px">Use the word in your own sentence</div></div><button class="mic" id="mic" onclick="listen()">🎙️</button></div>
+<div class="feedback" id="feedback">Tap the microphone and speak naturally. I’ll check whether you used today’s word.</div>
+<div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn primary" onclick="nextWord()">Next word →</button></div>
+</div>
+</section>
+<aside class="sidecol">
+<div class="card mini"><h3>Today’s progress</h3><div class="stat"><span>Words mastered</span><b id="mastered">12 / 20</b></div><div class="bar"><i id="progressbar"></i></div><div class="stat"><span>Speaking accuracy</span><b>86%</b></div><div class="stat"><span>XP earned</span><b class="score">+240</b></div></div>
+<div class="card mini"><h3>Recent vocabulary</h3><div class="words"><span class="tag">articulate</span><span class="tag">adapt</span><span class="tag">precise</span><span class="tag">curious</span><span class="tag">efficient</span><span class="tag">reliable</span></div></div>
+<div class="card mini challenge"><h3>⚡ Daily challenge</h3><p>Use 3 new words in a 30-second story. Speaking naturally is more important than being perfect.</p><button class="btn ghost" onclick="challenge()">Start challenge</button></div>
+</aside>
+</div>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const lessons=[
+["Resilient","/rɪˈzɪliənt/","Able to recover quickly from difficulty or change.","A resilient learner keeps practicing even after making mistakes."],
+["Articulate","/ɑːrˈtɪkjələt/","Able to express ideas clearly and effectively.","She gave an articulate explanation of the project."],
+["Adapt","/əˈdæpt/","To change your approach to fit a new situation.","Good developers adapt when requirements change."],
+["Precise","/prɪˈsaɪs/","Exact, accurate, and carefully expressed.","Try to be precise when describing the problem."],
+["Curious","/ˈkjʊəriəs/","Eager to know, learn, or discover something.","A curious learner asks useful questions."]
+];
+let idx=0, saved=new Set();
+const $=id=>document.getElementById(id);
+function render(){let x=lessons[idx];$("word").textContent=x[0];$("phonetic").textContent=x[1]+" · adjective/verb";$("meaning").textContent=x[2];$("example").textContent="“"+x[3]+"”";$("feedback").textContent="Tap the microphone and speak naturally. I’ll check whether you used today’s word."}
+function say(text,rate=.88){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=rate;speechSynthesis.speak(u)}
+function speakWord(){say(lessons[idx][0]);toast("Playing pronunciation")}
+function slowSpeak(){say(lessons[idx][0],.55);toast("Playing slowly")}
+function saveWord(){saved.add(idx);toast("Saved “"+lessons[idx][0]+"” to your vocabulary")}
+function nextWord(){idx=(idx+1)%lessons.length;render();say(lessons[idx][0]);toast("New word unlocked")}
+function listen(){
+ const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){$("feedback").textContent="Speech recognition isn't supported in this browser. Try Chrome or Edge.";return}
+ const r=new R();r.lang="en-US";r.interimResults=false;r.maxAlternatives=1;$("mic").classList.add("recording");$("feedback").textContent="🎙️ Listening… speak a sentence using “"+lessons[idx][0]+"”.";
+ r.onresult=e=>{let heard=e.results[0][0].transcript,ok=heard.toLowerCase().includes(lessons[idx][0].toLowerCase());$("feedback").textContent=(ok?"✅ Excellent! You used the target word naturally.":"💡 Good attempt. Try again and include the target word.")+"  Heard: “"+heard+"”";$("mastered").textContent=ok?"13 / 20":"12 / 20";if(ok){$("progressbar").style.width="78%";say("Great job!")} };
+ r.onerror=()=>{$("feedback").textContent="I couldn't hear that clearly. Please try again.";};
+ r.onend=()=>$("mic").classList.remove("recording");r.start();
+}
+function challenge(){toast("Challenge started — use resilient, adapt and precise in one short story.");say("Challenge started. Use resilient, adapt and precise in one short story.")}
+function toast(t){let x=$("toast");x.textContent=t;x.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>x.style.display="none",2200)}
+render();
+</script>
+</body>
+</html>
